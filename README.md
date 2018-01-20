@@ -12,10 +12,15 @@ puppet agent -t
 
 ##SERVER 
 puppet cert list
+
 puppet cert sign puppetnode1
+
 cd /etc/puppetlabs/code/environments/production/modules/
+
 puppet module generate --skip-interview sree-simpleweb
+
 nano simpleweb/manifests/init.pp
+
 ```
 class simpleweb {
 	
