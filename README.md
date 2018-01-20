@@ -72,7 +72,9 @@ class simpleweb {
 
 ##SERVER
 mkdir simpleweb/templates
+
 nano simpleweb/templates/index.html.erb
+
 ```
 <!DOCTYPE html>
 <html>
@@ -89,8 +91,11 @@ nano simpleweb/templates/index.html.erb
 ```
 ##SERVER
 puppet apply -e "include simpleweb"
+
 curl localhost
+
 BROWSER: http://0.0.0.0:8090/
+
 ```
 nano ../manifests/site.pp
 node 'puppetnode1' {
@@ -104,5 +109,8 @@ node 'puppet' {
 ```
 ##CLIENT
 puppet agent -t
+
 curl localhost
+
 BROWSER: http://0.0.0.0:8091/
+
